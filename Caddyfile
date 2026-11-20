@@ -1,0 +1,27 @@
+:{$PORT:80} {
+    root * /app
+    encode zstd gzip
+
+    # Padanan aturan perlindungan file sensitif dari .htaccess.
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "same-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+        Cross-Origin-Opener-Policy "same-origin"
+    }
+
+    @private path \
+        /api/config.php \
+        /api/config.example.php \
+        /api/lib/* \
+        /database/* \
+        /tools/* \
+        /router.php \
+        /README.md \
+        /.git/* \
+        /.env*
+    respond @private 404
+
+    php_server
+}

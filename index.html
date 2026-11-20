@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Kebijakan keamanan: skrip hanya dari server ini (tanpa skrip sebaris),
+      gambar hanya dari server ini, permintaan data hanya ke server ini.
+      Google Fonts boleh dimuat untuk huruf; bila diblokir, huruf sistem dipakai.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+
+    <meta name="referrer" content="same-origin" />
+
+    <title>Informasi Kas X TKJT 1</title>
+
+    <meta name="theme-color" content="#f2f5f1" />
+
+    <script src="tema.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css?v=20261107" />
+
+    <link rel="stylesheet" href="tambahan.css?v=20261107" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <noscript>
+      <p style="padding: 2rem; font-family: sans-serif">
+        Aplikasi Informasi Kas membutuhkan JavaScript. Aktifkan JavaScript di
+        peramban, lalu muat ulang halaman ini.
+      </p>
+    </noscript>
+
+    <script src="api.js?v=20261107"></script>
+
+    <script src="fitur.js?v=20261107"></script>
+
+    <script src="script.js?v=20261107"></script>
+  </body>
+</html>
